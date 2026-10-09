@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101c2b" />
+  <meta name="description" content="SF Massive Est. delivers civil construction, electrical works, steel structures, and crane installation across Saudi Arabia." />
+  <title>SF Massive Est. | Building Strength. Delivering Excellence.</title>
+
+  <!-- Tailwind CSS CDN: ideal for a quick prototype. For production, compile Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#101c2b",
+            steel: "#1e3449",
+            orange: "#f28c28",
+            paper: "#f4f6f8"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            lift: "0 18px 45px rgba(16, 28, 43, .12)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    .hero-grid {
+      background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+    .service-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(16,28,43,.12); border-color: #f28c28; }
+    .project-image { transition: transform .5s ease; }
+    .project-card:hover .project-image { transform: scale(1.04); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-3" aria-label="SF Massive home">
+        <span class="grid h-11 w-11 place-items-center rounded-sm bg-orange text-lg font-black tracking-tight text-ink">SF</span>
+        <span class="leading-tight">
+          <span class="block text-lg font-extrabold tracking-[.12em]">SF MASSIVE</span>
+          <span class="block text-[10px] font-semibold uppercase tracking-[.24em] text-slate-300">Est. · Contracting</span>
+        </span>
+      </a>
+
+      <button id="menu-toggle" class="rounded border border-white/20 p-2 text-white md:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="hidden items-center gap-8 text-sm font-semibold text-slate-200 md:flex">
+        <a class="transition hover:text-orange" href="#about">About</a>
+        <a class="transition hover:text-orange" href="#services">Services</a>
+        <a class="transition hover:text-orange" href="#projects">Projects</a>
+        <a class="transition hover:text-orange" href="#contact">Contact</a>
+        <a href="#contact" class="rounded-sm bg-orange px-5 py-3 font-bold text-ink transition hover:bg-orange/90">Request a Quote <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 px-5 pb-5 md:hidden">
+      <div class="flex flex-col gap-1 pt-3 text-sm font-semibold">
+        <a class="rounded px-3 py-3 hover:bg-white/5" href="#about">About</a>
+        <a class="rounded px-3 py-3 hover:bg-white/5" href="#services">Services</a>
+        <a class="rounded px-3 py-3 hover:bg-white/5" href="#projects">Projects</a>
+        <a class="rounded px-3 py-3 hover:bg-white/5" href="#contact">Contact</a>
+        <a class="mt-2 rounded-sm bg-orange px-4 py-3 text-center font-bold text-ink" href="#contact">Request a Quote ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative isolate overflow-hidden bg-ink text-white">
+      <div class="hero-grid absolute inset-0 opacity-60"></div>
+      <div class="absolute -right-24 -top-28 h-96 w-96 rounded-full bg-orange/15 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 sm:py-24 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <div class="mb-6 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[.22em] text-orange">
+            <span class="h-px w-10 bg-orange"></span> Saudi Arabia · Construction & Engineering
+          </div>
+          <h1 class="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-7xl">
+            Building strength.<br />
+            <span class="text-orange">Delivering excellence.</span>
+          </h1>
+          <p class="mt-7 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            Practical construction and engineering solutions—delivered with a focus on safety, workmanship, coordination, and dependable execution.
+          </p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#services" class="inline-flex items-center justify-center gap-3 rounded-sm bg-orange px-6 py-4 text-sm font-extrabold text-ink transition hover:bg-orange/90">Explore our services <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-sm border border-white/25 px-6 py-4 text-sm font-bold text-white transition hover:border-orange hover:text-orange">Discuss your project</a>
+          </div>
+          <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-6 text-sm text-slate-300">
+            <span class="flex items-center gap-2"><span class="text-orange">✓</span> Safety-led delivery</span>
+            <span class="flex items-center gap-2"><span class="text-orange">✓</span> Quality workmanship</span>
+            <span class="flex items-center gap-2"><span class="text-orange">✓</span> Reliable coordination</span>
+          </div>
+        </div>
+
+        <!-- Decorative industrial illustration; replace with an authentic project photo when available. -->
+        <div class="relative mx-auto w-full max-w-xl">
+          <div class="absolute -inset-3 translate-x-3 translate-y-3 border border-orange/50"></div>
+          <div class="relative overflow-hidden bg-steel">
+            <img class="h-[330px] w-full object-cover sm:h-[430px]" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85" alt="Industrial construction site with steel structures" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-orange">Built around your needs</p>
+              <p class="mt-2 max-w-sm text-2xl font-extrabold leading-tight sm:text-3xl">From groundwork to installation.</p>
+            </div>
+            <div class="absolute right-5 top-5 grid h-14 w-14 place-items-center border border-white/50 bg-ink/60 text-2xl text-orange" aria-hidden="true">＋</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-1.5 bg-orange"></div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-paper">
+      <div class="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:grid-cols-3 lg:px-8">
+        <div class="flex items-center gap-4"><span class="grid h-12 w-12 shrink-0 place-items-center bg-white text-orange shadow-sm">01</span><div><p class="font-extrabold text-ink">Safe Delivery</p><p class="mt-1 text-sm text-slate-500">Planning with safety in mind</p></div></div>
+        <div class="flex items-center gap-4"><span class="grid h-12 w-12 shrink-0 place-items-center bg-white text-orange shadow-sm">02</span><div><p class="font-extrabold text-ink">Quality Workmanship</p><p class="mt-1 text-sm text-slate-500">Attention to detail at every stage</p></div></div>
+        <div class="flex items-center gap-4"><span class="grid h-12 w-12 shrink-0 place-items-center bg-white text-orange shadow-sm">03</span><div><p class="font-extrabold text-ink">Reliable Execution</p><p class="mt-1 text-sm text-slate-500">Clear coordination and follow-through</p></div></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:py-24 lg:grid-cols-2 lg:px-8">
+      <div class="relative">
+        <img class="h-[340px] w-full object-cover sm:h-[440px]" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" alt="Modern commercial building and structural architecture" loading="lazy" />
+        <div class="absolute -bottom-5 -right-3 max-w-[250px] bg-orange p-5 text-ink shadow-lift sm:-right-5 sm:p-6">
+          <p class="text-2xl font-black">Built on trust.</p><p class="mt-1 text-sm font-semibold">Focused on lasting results.</p>
+        </div>
+      </div>
+      <div class="pt-4 lg:pl-3">
+        <p class="text-xs font-extrabold uppercase tracking-[.22em] text-orange">Who we are</p>
+        <h2 class="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">A dependable partner for complex work.</h2>
+        <p class="mt-6 leading-8 text-slate-600">SF Massive Est. is a Saudi-based contracting firm supporting construction and engineering requirements across civil works, electrical installations, steel structures, and crane-related services. We work to understand each project's scope, coordinate closely with clients and site teams, and deliver practical solutions aligned with agreed requirements.</p>
+        <p class="mt-4 leading-8 text-slate-600">Our approach is grounded in safe working practices, responsive communication, quality control, and disciplined execution—from initial coordination through site delivery and handover.</p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="border-l-2 border-orange pl-4"><p class="font-extrabold text-ink">Client-focused</p><p class="mt-1 text-sm leading-6 text-slate-500">Solutions shaped around scope, schedule, and site needs.</p></div>
+          <div class="border-l-2 border-orange pl-4"><p class="font-extrabold text-ink">Execution-minded</p><p class="mt-1 text-sm leading-6 text-slate-500">Practical coordination from preparation to completion.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-paper py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div class="max-w-2xl"><p class="text-xs font-extrabold uppercase tracking-[.22em] text-orange">What we do</p><h2 class="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">Services built for the real world.</h2></div>
+          <p class="max-w-md leading-7 text-slate-600">Integrated contracting support for industrial, commercial, and infrastructure project requirements.</p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="service-card border border-slate-200 bg-white p-6 sm:p-7">
+            <span class="grid h-12 w-12 place-items-center bg-orange/10 text-orange" aria-hidden="true"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M8 10h.01M16 10h.01"/></svg></span>
+            <h3 class="mt-6 text-lg font-extrabold text-ink">Civil Construction</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Building works, foundations, concrete works, blockwork, backfilling, and site development.</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-orange">Discuss civil works <span>→</span></a>
+          </article>
+          <article class="service-card border border-slate-200 bg-white p-6 sm:p-7">
+            <span class="grid h-12 w-12 place-items-center bg-orange/10 text-orange" aria-hidden="true"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/></svg></span>
+            <h3 class="mt-6 text-lg font-extrabold text-ink">Electrical Works</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Electrical installation support for residential, commercial, and industrial environments.</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-orange">Discuss electrical works <span>→</span></a>
+          </article>
+          <article class="service-card border border-slate-200 bg-white p-6 sm:p-7">
+            <span class="grid h-12 w-12 place-items-center bg-orange/10 text-orange" aria-hidden="true"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 21V5h16v16M2 21h20M8 5V2h8v3M8 9h8M8 13h8M8 17h8"/></svg></span>
+            <h3 class="mt-6 text-lg font-extrabold text-ink">Steel Structures</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Steel fabrication and erection coordination, structural installation, and related site works.</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-orange">Discuss steel works <span>→</span></a>
+          </article>
+          <article class="service-card border border-slate-200 bg-white p-6 sm:p-7">
+            <span class="grid h-12 w-12 place-items-center bg-orange/10 text-orange" aria-hidden="true"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 20h18M5 20V8h8v12M13 12h5l2 3v5M7 11h4M7 14h4M7 17h4M16 16h.01M18 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg></span>
+            <h3 class="mt-6 text-lg font-extrabold text-ink">Crane Installation</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">EOT and jib crane installation support, runway rail alignment, rail welding, testing, and commissioning coordination.</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-orange">Discuss crane services <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / portfolio -->
+    <section id="projects" class="mx-auto max-w-7xl px-5 py-20 sm:py-24 lg:px-8">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div><p class="text-xs font-extrabold uppercase tracking-[.22em] text-orange">Selected work</p><h2 class="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">Work that moves projects forward.</h2></div>
+        <p class="max-w-md leading-7 text-slate-600">A preview of the sectors and work types we support. Add approved project photos and verified project details before publishing.</p>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="project-card group overflow-hidden bg-ink">
+          <div class="overflow-hidden"><img class="project-image h-64 w-full object-cover" src="https://images.unsplash.com/photo-1503387762-592cem3b?auto=format&fit=crop&w=900&q=85" alt="Civil construction project" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85'"/></div>
+          <div class="p-6 text-white"><p class="text-xs font-bold uppercase tracking-[.18em] text-orange">01 / Civil</p><h3 class="mt-2 text-xl font-extrabold">Civil & Building Works</h3><p class="mt-2 text-sm leading-6 text-slate-300">Foundations, concrete, and building construction support.</p></div>
+        </article>
+        <article class="project-card group overflow-hidden bg-ink">
+          <div class="overflow-hidden"><img class="project-image h-64 w-full object-cover" src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=85" alt="Industrial electrical and mechanical facility" loading="lazy"/></div>
+          <div class="p-6 text-white"><p class="text-xs font-bold uppercase tracking-[.18em] text-orange">02 / Industrial</p><h3 class="mt-2 text-xl font-extrabold">Industrial Installations</h3><p class="mt-2 text-sm leading-6 text-slate-300">Site installation coordination for industrial environments.</p></div>
+        </article>
+        <article class="project-card group overflow-hidden bg-ink">
+          <div class="overflow-hidden"><img class="project-image h-64 w-full object-cover" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85" alt="Industrial engineering and equipment work" loading="lazy"/></div>
+          <div class="p-6 text-white"><p class="text-xs font-bold uppercase tracking-[.18em] text-orange">03 / Steel & Crane</p><h3 class="mt-2 text-xl font-extrabold">Steel & Crane Services</h3><p class="mt-2 text-sm leading-6 text-slate-300">Structural work, crane installation, and runway rail activities.</p></div>
+        </article>
+      </div>
+      <p class="mt-5 text-xs leading-5 text-slate-500">Portfolio note: these are illustrative stock images, not evidence of SF Massive Est. project completion. Replace them with approved company photographs and accurate project descriptions.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-ink py-20 text-white sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[.22em] text-orange">Let's build together</p>
+          <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Tell us about your project.</h2>
+          <p class="mt-6 max-w-lg leading-8 text-slate-300">Share your scope, location, and expected schedule. Our team can review your enquiry and discuss the next steps.</p>
+          <div class="mt-10 space-y-6">
+            <div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center bg-white/10 text-orange" aria-hidden="true">✉</span><div><p class="text-xs font-bold uppercase tracking-wider text-slate-400">Email</p><a class="mt-1 inline-block font-semibold hover:text-orange" href="mailto:Sales@sfmassive.com">Sales@sfmassive.com</a><br/><a class="mt-1 inline-block font-semibold hover:text-orange" href="mailto:Info@sfmassive.com">Info@sfmassive.com</a></div></div>
+            <div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center bg-white/10 text-orange" aria-hidden="true">☎</span><div><p class="text-xs font-bold uppercase tracking-wider text-slate-400">Phone</p><a class="mt-1 inline-block font-semibold hover:text-orange" href="tel:+966565720565">+966 56 572 0565</a></div></div>
+            <div class="flex gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center bg-white/10 text-orange" aria-hidden="true">⌖</span><div><p class="text-xs font-bold uppercase tracking-wider text-slate-400">Location</p><p class="mt-1 font-semibold">Saudi Arabia</p></div></div>
+          </div>
+        </div>
+
+        <!-- Frontend form: uses mailto so it can work without a backend. Replace with a secure form endpoint for production. -->
+        <form id="contact-form" class="bg-white p-6 text-ink shadow-lift sm:p-9">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div><label for="name" class="mb-2 block text-sm font-bold">Full name <span class="text-orange">*</span></label><input id="name" name="name" required autocomplete="name" class="w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20" placeholder="Your name"/></div>
+            <div><label for="company" class="mb-2 block text-sm font-bold">Company</label><input id="company" name="company" autocomplete="organization" class="w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20" placeholder="Company name"/></div>
+            <div><label for="email" class="mb-2 block text-sm font-bold">Work email <span class="text-orange">*</span></label><input id="email" name="email" type="email" required autocomplete="email" class="w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20" placeholder="you@company.com"/></div>
+            <div><label for="phone" class="mb-2 block text-sm font-bold">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" class="w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20" placeholder="+966 ..."/></div>
+            <div class="sm:col-span-2"><label for="service" class="mb-2 block text-sm font-bold">Service required <span class="text-orange">*</span></label><select id="service" name="service" required class="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20"><option value="">Choose a service</option><option>Civil construction</option><option>Electrical works</option><option>Steel structures</option><option>Crane installation / rail welding</option><option>Multiple services / other</option></select></div>
+            <div class="sm:col-span-2"><label for="message" class="mb-2 block text-sm font-bold">Project details <span class="text-orange">*</span></label><textarea id="message" name="message" required rows="4" class="w-full resize-y border border-slate-300 px-4 py-3 outline-none transition focus:border-orange focus:ring-2 focus:ring-orange/20" placeholder="Briefly describe your scope, project location, and timeline..."></textarea></div>
+          </div>
+          <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-3 bg-orange px-6 py-4 text-sm font-extrabold text-ink transition hover:bg-orange/90">Prepare enquiry email <span aria-hidden="true">↗</span></button>
+          <p class="mt-3 text-xs leading-5 text-slate-500">This demo opens your email application with the enquiry prepared. It does not send or store your information on this website.</p>
+          <p id="form-status" class="mt-3 hidden text-sm font-semibold text-emerald-700" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b1420] text-slate-400">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <a href="#home" class="font-extrabold tracking-[.12em] text-white">SF MASSIVE <span class="text-orange">EST.</span></a>
+      <p class="text-sm">Building Strength. Delivering Excellence.</p>
+      <p class="text-xs">© <span id="year"></span> SF Massive Est. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation: toggle menu and close it after selecting a section.
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    // Keep the copyright year current.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Demo form: validate required fields, then prepare an email in the visitor's mail app.
+    // For production, connect this form to a secure backend or form service.
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const subject = `Project enquiry — ${data.get("service")}`;
+      const body = [
+        `Name: ${data.get("name")}`,
+        `Company: ${data.get("company") || "Not provided"}`,
+        `Email: ${data.get("email")}`,
+        `Phone: ${data.get("phone") || "Not provided"}`,
+        `Service: ${data.get("service")}`,
+        "",
+        "Project details:",
+        data.get("message")
+      ].join("\n");
+
+      const mailto = `mailto:Sales@sfmassive.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const status = document.getElementById("form-status");
+      status.textContent = "Your email application should open with the enquiry details. Please review and send the message there.";
+      status.classList.remove("hidden");
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
